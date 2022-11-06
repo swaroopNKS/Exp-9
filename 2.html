@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <style>
+        .all{
+            background-color: #51E2F5;
+        }
+    </style>
+    
+    <script>
+        var app = angular.module("myapp",['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider.when('/URK1001',{
+                    templateUrl: "URK1001.html"
+                })  
+                .when('/URK1002',{
+                    templateUrl: "URK1002.html"
+                })  
+                .when('/URK1003',{
+                    templateUrl: "URK1003.html"
+                })      
+                .when('/URK1004',{
+                    templateUrl: "URK1004.html"
+                })  
+        });
+    </script>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-app="myapp" style="margin-top: 50px;">
+    <div class="all">
+        <h1>Student Profiles</h1>
+
+        <h3>Click the Register Number to view their profile:</h3>
+        <div class="links">
+            <a href="#!URK1001">URK1001</a>
+            <a href="#!URK1002">URK1002</a>
+            <a href="#!URK1003">URK1003</a>
+            <a href="#!URK1004">URK1004</a>
+        </div><br><br>
+        <hr>
+    </div>
+        <div ng-view style="margin-top: 20px;">
+            
+        </div>
+    
+</body>
+</html>
